@@ -1,13 +1,17 @@
 <script setup lang="ts">
-
+definePageMeta({
+  documentDriven: false
+})
 </script>
 
 <template>
-  <AuroraLight />
-  <div class="main-content">
-    <MainNavigation />
-    <HomeGrid />
-  </div>
+  <NuxtLayout>
+    <AuroraLight />
+    <div class="main-content">
+      <MainNavigation />
+      <HomeGrid />
+    </div>
+  </NuxtLayout>
 </template>
 
 <style scoped lang="scss">
