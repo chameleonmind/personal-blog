@@ -4,8 +4,6 @@ import { useAsyncData } from '#app'
 const { data: navigation } = useAsyncData('navigation', () => {
   return fetchContentNavigation()
 })
-
-console.log(navigation)
 </script>
 
 <template>
