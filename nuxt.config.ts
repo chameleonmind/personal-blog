@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   }]],
   css: ['~/assets/css/main.scss'],
   content: {
+    documentDriven: true,
     highlight: {
       theme: 'github-light-default'
     }

@@ -1,5 +1,11 @@
 <script setup lang="ts">
+import { useAsyncData } from '#app'
 
+const { data: navigation } = useAsyncData('navigation', () => {
+  return fetchContentNavigation()
+})
+
+console.log(navigation)
 </script>
 
 <template>
@@ -11,14 +17,9 @@
     </NuxtLink>
     <nav>
       <ul>
-        <li>
-          <NuxtLink to="/blog">
-            Blog
-          </NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/til">
-            TIL
+        <li v-for="nav in navigation" :key="nav._path">
+          <NuxtLink :to="nav._path">
+            {{ nav.title }}
           </NuxtLink>
         </li>
       </ul>

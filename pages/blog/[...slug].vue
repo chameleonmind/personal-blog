@@ -1,11 +1,11 @@
 <script setup lang="ts">
-definePageMeta({
-  layout: 'blog'
-})
+
 </script>
 
 <template>
-  <ContentDoc />
+  <NuxtLayout name="blog">
+    <ContentDoc />
+  </NuxtLayout>
 </template>
 
 <style scoped>

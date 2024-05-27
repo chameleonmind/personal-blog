@@ -39,9 +39,20 @@ import HomePostList from '~/components/HomePostList.vue'
             <h2 class="home-subtitle">
               Currently working on:
             </h2>
-            <ul>
+            <ul class="bulleted-list">
               <li>
                 Head of Product at Badin Soft
+              </li>
+              <li>
+                ApeironUI - a Vue 3 component library
+              </li>
+              <li>
+                <LinkOut href="https://github.com/chameleonmind/nshot">
+                  Nshot
+                </LinkOut> - a screenshot tool
+              </li>
+              <li>
+                FrameFuse - a frame-by-frame and sprite animation JS toolkit
               </li>
             </ul>
           </div>
@@ -158,5 +169,10 @@ import HomePostList from '~/components/HomePostList.vue'
     font-weight: 700;
     margin-bottom: 1rem;
   }
+}
+
+.bulleted-list {
+  list-style-type: disc;
+  padding-left: 1rem;
 }
 </style>
