@@ -59,7 +59,7 @@ onMounted(() => {
   }
 
   :deep(h1) {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     font-size: 2.25rem;
 
     @include screen-size('tablet') {
@@ -75,15 +75,6 @@ onMounted(() => {
 main {
   position: relative;
   z-index: 1;
-}
-
-:deep(pre.shiki) {
-  overflow: auto;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  padding: 0.5rem;
-  background-color: #e9e8ed;
-  font-size: 0.9rem;
 }
 
 :deep(img) {
