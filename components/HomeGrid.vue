@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import LinkOut from '~/components/common/LinkOut.vue'
 import HomePostList from '~/components/HomePostList.vue'
+import TilHomePostList from '~/components/TilHomePostList.vue'
 </script>
 
 <template>
@@ -17,7 +18,7 @@ import HomePostList from '~/components/HomePostList.vue'
               I build stuff using TypeScript and PHP.
             </p>
             <p>
-              I'm currently working as a Head of Product and a lead front-end engineer at Badin Soft, located in Niš, Serbia.
+              Currently working as a Head of Product and a lead frontend engineer at Badin Soft, located in Niš, Serbia.
             </p>
             <p>I enjoy using Vue, Nuxt, AdonisJS, and Laravel.</p>
             <p>
@@ -37,7 +38,7 @@ import HomePostList from '~/components/HomePostList.vue'
         <section class="home-left-work">
           <div class="half-wrapper">
             <h2 class="home-subtitle">
-              Currently working on:
+              Work
             </h2>
             <ul class="bulleted-list">
               <li>
@@ -49,7 +50,7 @@ import HomePostList from '~/components/HomePostList.vue'
               <li>
                 <LinkOut href="https://github.com/chameleonmind/nshot">
                   Nshot
-                </LinkOut> - a screenshot tool
+                </LinkOut> - a screenshot tool based on Screen Capture API
               </li>
               <li>
                 FrameFuse - a frame-by-frame and sprite animation JS toolkit
@@ -61,17 +62,21 @@ import HomePostList from '~/components/HomePostList.vue'
       <div class="wrapper-right">
         <section class="home-right-til">
           <div class="half-wrapper right">
-            <h2 class="home-subtitle">
-              Today I learned
-            </h2>
-            <HomePostList path="til" />
+            <NuxtLink to="/til">
+              <h2 class="home-subtitle">
+                Today I learned
+              </h2>
+            </NuxtLink>
+            <TilHomePostList />
           </div>
         </section>
         <section class="home-right-blogs">
           <div class="half-wrapper right">
-            <h2 class="home-subtitle">
-              Blog
-            </h2>
+            <NuxtLink to="/blog">
+              <h2 class="home-subtitle">
+                Blog
+              </h2>
+            </NuxtLink>
             <HomePostList path="blog" />
           </div>
         </section>

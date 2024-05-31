@@ -9,3 +9,22 @@ a {
     border-bottom-style: solid;
   }
 }
+
+pre.shiki {
+  overflow: auto;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem;
+  background-color: #e9e8ed;
+  font-size: 0.9rem;
+
+  :has(.highlighted) .line {
+    opacity: 0.5;
+    filter: grayscale(0.5) blur(1px);
+
+    &.highlighted {
+      opacity: 1;
+      filter: grayscale(0) blur(0);
+    }
+  }
+}
