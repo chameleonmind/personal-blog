@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   }], 'nuxt-og-image', '@nuxt/image', '@nuxtjs/seo'],
   site: {
     // production URL
-    url: 'https://chameleon-mind.dev',
+    url: 'https://chameleonmind.dev',
     name: 'Chameleon Mind',
     description: 'Chameleon Mind (Milos Milosevic) personal website and blog',
     defaultLocale: 'en',
