@@ -8,7 +8,7 @@ const { data: navigation } = useAsyncData('navigation', () => {
 
 <template>
   <header>
-    <NuxtLink to="/" class="logo-link">
+    <NuxtLink to="/" class="logo-link" aria-label="Chameleon Mind go to home">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
         <g id="Layer_1" data-name="Layer 1">
           <path d="M527.4 143.3c71.5 41.3 132.7 98.5 178.8 166.7 7.8 11.5 15.2 23.4 22.1 35.5s10.9 19.9 15.9 30.1c32.2 65.8 51.5 139 54.7 216.4s-15.1 15-15.1 22.5h0c0 6.8 15.4 13.6 15 20.4C788.3 811 642.1 950.5 463.4 950.5h0c-114.9-.1-208-93.2-208-208.1h0c0-70.7 57.3-128 128-128h0c44.2 0 80 35.8 80 80s-21.5 48-48 48-32-14.3-32-32" class="cls-4" />
