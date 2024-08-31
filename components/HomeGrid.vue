@@ -53,7 +53,9 @@ import TilHomePostList from '~/components/TilHomePostList.vue'
                 </LinkOut> - a screenshot tool based on Screen Capture API
               </li>
               <li>
-                FrameFuse - a frame-by-frame and sprite animation JS toolkit
+                <NuxtLink to="/frame-fusion">
+                  Frame Fusion
+                </NuxtLink> - animate sequences of images in a single frame
               </li>
             </ul>
           </div>

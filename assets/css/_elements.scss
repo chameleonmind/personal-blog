@@ -28,3 +28,20 @@ pre.shiki {
     }
   }
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+th {
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+th, td {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-bg-tertiary);
+}
