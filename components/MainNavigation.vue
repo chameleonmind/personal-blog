@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { useAsyncData } from '#app'
 
-const { data: navigation } = useAsyncData('navigation', () => {
-  return fetchContentNavigation()
+const { data: navigation } = useAsyncData('navigation', async () => {
+  const nav = await fetchContentNavigation()
+  return nav.filter(navItem => navItem._path !== '/frame-fusion')
 })
 </script>
 
