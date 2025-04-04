@@ -16,36 +16,20 @@
   font-family: var(--font-family-mono), monospace;
   text-transform: lowercase;
   font-weight: 700;
-  color: var(--accent-color);
-  padding: 0.5rem 1rem;
-  //border: 1px solid var(--border-color-alt);
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  padding: 0.5rem 1.5rem;
   border-bottom: none;
   transition: color 0.2s ease-in-out;
   position: relative;
-
-  &:before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--accent-color);
-    clip-path: polygon(
-      0 12px,
-      12px 0,
-      100% 0,
-      100% calc(100% - 12px),
-      calc(100% - 12px) 100%,
-      0 100%,
-      0 12px,
-      1px calc(12px + 0.41px),
-      1px calc(100% - 1px),
-      calc(100% - 12px - 0.41px) calc(100% - 1px),
-      calc(100% - 1px) calc(100% - 12px - 0.41px),
-      calc(100% - 1px) 1px,
-      calc(12px + 0.41px) 1px,
-      1px calc(12px + 0.41px)
-    );
-    transition: background-color 0.2s ease-in-out;
-  }
+  clip-path: polygon(
+    0 12px,
+    12px 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%
+  );
 
   &:hover {
     color: var(--text-color-hover);

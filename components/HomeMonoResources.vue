@@ -58,7 +58,7 @@ const blogQuery: QueryBuilderParams = { path: '/blog', limit: 3, sort: [{ date: 
 @import '@/assets/css-utils/breakpoints.scss';
 .home-mono-resources {
   padding: 1rem;
-  //border: 1px solid var(--border-color-alt);
+  border: 1px solid var(--border-color-lite);
   border-radius: var(--border-radius);
   background-color: var(--base-color-lighter);
 

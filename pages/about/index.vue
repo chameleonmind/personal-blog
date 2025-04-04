@@ -7,6 +7,24 @@ const imageKey = ref(0)
 function refreshImageKey() {
   imageKey.value++
 }
+
+useHead({
+  title: `Chameleon Mind | About`,
+  meta: [
+    { hid: 'description', name: 'description', content: 'About Milos Milosevic (Chameleon Mind)' },
+    { hid: 'og:title', property: 'og:title', content: 'About | Chameleon Mind' },
+    { hid: 'og:description', property: 'og:description', content: 'About Milos Milosevic (Chameleon Mind)' },
+    // Twitter Card
+    { hid: 'twitter:title', name: 'twitter:title', content: 'About | Chameleon Mind' },
+    { hid: 'twitter:description', name: 'twitter:description', content: 'About Milos Milosevic (Chameleon Mind)' }
+  ]
+})
+
+defineOgImageComponent('ChameleonMindOg', {
+  section: '| About',
+  title: 'Projects and about me',
+  description: 'Milos Milosevic (Chameleon Mind)',
+})
 </script>
 
 <template>
@@ -17,7 +35,7 @@ function refreshImageKey() {
         <MainNavigation />
         <div class="about-content">
           <div class="about-content-left">
-            <ProfileImage :key="imageKey" class="appear-animation-blur" @click="refreshImageKey" />
+            <ProfileImage :key="imageKey" class="appear-animation" @click="refreshImageKey" />
             <h1 class="about-heading main-heading appear-animation" style="animation-delay: 0.2s">
               About me
             </h1>
@@ -142,12 +160,6 @@ function refreshImageKey() {
   .appear-animation {
     opacity: 0;
     animation: appear-up 250ms ease-in-out;
-    animation-fill-mode: forwards;
-  }
-
-  .appear-animation-blur {
-    opacity: 0;
-    animation: appear-up-blur 250ms ease-in-out;
     animation-fill-mode: forwards;
   }
 
