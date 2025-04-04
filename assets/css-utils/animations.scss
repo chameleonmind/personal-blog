@@ -21,3 +21,15 @@
     filter: blur(0);
   }
 }
+
+@keyframes link-flash {
+  0% {
+    color: var(--accent-color);
+  }
+  50% {
+    color: var(--accent-color);
+  }
+  100% {
+    color: var(--accent-color);
+  }
+}

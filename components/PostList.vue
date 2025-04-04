@@ -14,13 +14,13 @@ const query: QueryBuilderParams = { path: props.path, sort: [{ date: -1 }] }
         <p class="date">
           {{ new Date(post.date).toLocaleDateString('en-GB') }}
         </p>
-        <NuxtLink :to="post._path">
+        <NuxtLink :to="post._path" class="post-title">
           <h2>{{ post.title }}</h2>
         </NuxtLink>
         <p class="description">
           {{ post.description }}
         </p>
-        <NuxtLink :to="post._path">
+        <NuxtLink v-if="false" :to="post._path">
           Read more
         </NuxtLink>
       </div>
@@ -34,12 +34,16 @@ const query: QueryBuilderParams = { path: props.path, sort: [{ date: -1 }] }
 <style scoped lang="scss">
 .single-post {
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   border-bottom: 1px solid var(--border-color-alt);
 }
 .date {
   font-size: 0.875rem;
   margin-bottom: 0 !important;
+}
+
+.post-title:hover {
+  color: var(--accent-color);
 }
 
 h2 {
@@ -49,5 +53,6 @@ h2 {
 
 p.description {
   margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 </style>
