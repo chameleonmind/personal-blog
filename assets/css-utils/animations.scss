@@ -22,6 +22,17 @@
   }
 }
 
+@keyframes appear-up-spin {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleX(1);
+  }
+}
+
 @keyframes link-flash {
   0% {
     color: var(--accent-color);

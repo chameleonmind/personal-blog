@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import ProfileImage from '~/components/ProfileImage.vue'
 import LinkOut from '~/components/common/LinkOut.vue'
+
+const imageKey = ref(0)
+
+function refreshImageKey() {
+  imageKey.value++
+}
 </script>
 
 <template>
@@ -11,8 +17,8 @@ import LinkOut from '~/components/common/LinkOut.vue'
         <MainNavigation />
         <div class="about-content">
           <div class="about-content-left">
-            <ProfileImage class="appear-animation" />
-            <h1 class="about-heading appear-animation" style="animation-delay: 0.2s">
+            <ProfileImage :key="imageKey" class="appear-animation-blur" @click="refreshImageKey" />
+            <h1 class="about-heading main-heading appear-animation" style="animation-delay: 0.2s">
               About me
             </h1>
             <p class="about-description appear-animation" style="animation-delay: 0.4s">
@@ -81,7 +87,7 @@ import LinkOut from '~/components/common/LinkOut.vue'
     padding: 2rem 0;
 
     @include screen-size('tablet') {
-      align-items: stretch;
+      align-items: center;
       flex-direction: row;
     }
   }
@@ -97,10 +103,20 @@ import LinkOut from '~/components/common/LinkOut.vue'
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    padding-bottom: 2rem;
 
     @include screen-size('tablet') {
       border-bottom: none;
       border-right: 1px solid var(--border-color-alt);
+      padding-bottom: 0;
+    }
+  }
+
+  .about-content-right {
+    padding-top: 2rem;
+
+    @include screen-size('tablet') {
+      padding-top: 0;
     }
   }
 
@@ -111,6 +127,10 @@ import LinkOut from '~/components/common/LinkOut.vue'
     color: var(--accent-color);
     margin-top: 0;
     margin-bottom: 0.5rem;
+
+    &.main-heading {
+      letter-spacing: 4px;
+    }
   }
 
   .about-description {
@@ -122,6 +142,12 @@ import LinkOut from '~/components/common/LinkOut.vue'
   .appear-animation {
     opacity: 0;
     animation: appear-up 250ms ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .appear-animation-blur {
+    opacity: 0;
+    animation: appear-up-blur 250ms ease-in-out;
     animation-fill-mode: forwards;
   }
 
