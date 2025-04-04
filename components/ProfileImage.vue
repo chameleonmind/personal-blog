@@ -10,7 +10,7 @@ const columnCount = ref(11)
         <mask id="grid-reveal-mask">
           <template v-for="row in rowCount" :key="row">
             <template v-for="column in columnCount" :key="column">
-              <rect class="mask-rect" :x="(column - 1) * 20" :y="(row - 1) * 20" width="20" height="20" fill="white" :style="{ animationDelay: `${(rowCount - row) * 0.05}s` }" />
+              <rect class="mask-rect" :x="(column - 1) * 20" :y="(row - 1) * 20" width="20" height="20" fill="white" :style="{ animationDelay: column === 1 ? '0.3s' : `${(rowCount - row) * 0.1 + 0.3}s` }" />
             </template>
           </template>
         </mask>
