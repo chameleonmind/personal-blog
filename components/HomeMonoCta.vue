@@ -20,7 +20,7 @@
   padding: 0.5rem 1rem;
   //border: 1px solid var(--border-color-alt);
   border-bottom: none;
-  transition: color 0.2s;
+  transition: color 0.2s ease-in-out;
   position: relative;
 
   &:before {
@@ -29,20 +29,22 @@
     inset: 0;
     background: var(--accent-color);
     clip-path: polygon(
-      0 0,
+      0 12px,
+      12px 0,
       100% 0,
       100% calc(100% - 12px),
       calc(100% - 12px) 100%,
       0 100%,
-      0 0,
-      1px 1px,
+      0 12px,
+      1px calc(12px + 0.41px),
       1px calc(100% - 1px),
-      calc(100% - 12px - 0.83px) calc(100% - 1px),
-      calc(100% - 1px) calc(100% - 12px - 0.83px),
+      calc(100% - 12px - 0.41px) calc(100% - 1px),
+      calc(100% - 1px) calc(100% - 12px - 0.41px),
       calc(100% - 1px) 1px,
-      1px 1px
+      calc(12px + 0.41px) 1px,
+      1px calc(12px + 0.41px)
     );
-    transition: background-color 0.2s;
+    transition: background-color 0.2s ease-in-out;
   }
 
   &:hover {
