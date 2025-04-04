@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import LinkOut from '~/components/common/LinkOut.vue'
 import HomeMonoResources from '~/components/HomeMonoResources.vue'
+import HomeMonoCta from '~/components/HomeMonoCta.vue'
 
 const name = 'Miloš MilošeVić'
 
@@ -19,27 +20,28 @@ function restartAnimation() {
         </span>
         <template v-for="(letter, index) in name">
           <br v-if="letter === ' '" :key="index">
-          <span v-else :key="letter + index" class="name-letter" :style="{ animationDelay: `${index * 0.1}s` }">{{ letter }}</span>
+          <span v-else :key="letter + index" class="name-letter" :style="{ animationDelay: `${index * 0.08}s` }">{{ letter }}</span>
         </template>
       </h1>
-      <p class="description appear-animation" style="animation-delay: 1.8s">
+      <p class="description appear-animation" style="animation-delay: 1.4s">
         aka chameleon mind
       </p>
-      <p class="description appear-animation" style="animation-delay: 2s">
+      <p class="description appear-animation" style="animation-delay: 1.6s">
         Former head of Product and current Lead Frontend enGineer at
         <LinkOut href="https://wisertech.com/">
           Wiser Technology Serbia
         </LinkOut>
       </p>
-      <p class="description appear-animation" style="animation-delay: 2.2s">
+      <p class="description appear-animation" style="animation-delay: 1.8s">
         i build stuff using TypeScript and PhP
       </p>
       <p v-if="false" class="description">
         I enjoy using Vue, Nuxt, AdonisJS, and Laravel.
       </p>
+      <HomeMonoCta class="cta appear-animation" style="animation-delay: 2s" />
     </div>
     <div class="about-content-right">
-      <HomeMonoResources class="appear-animation" style="animation-delay: 1.6s" />
+      <HomeMonoResources class="appear-animation" style="animation-delay: 1.2s" />
     </div>
   </div>
 </template>
@@ -78,9 +80,13 @@ function restartAnimation() {
     .name-letter {
       display: inline-block;
       opacity: 0;
-      animation: appear-up-blur 150ms ease-out;
+      animation: appear-up-blur 200ms ease-out;
       animation-fill-mode: forwards;
     }
+  }
+
+  .cta {
+    margin-top: 1rem;
   }
 }
 

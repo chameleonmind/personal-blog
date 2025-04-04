@@ -37,8 +37,8 @@ const blogQuery: QueryBuilderParams = { path: '/blog', limit: 3, sort: [{ date: 
     </p>
     <ContentList :query="tilQuery">
       <template #default="{ list }">
-        <p v-for="post in list" :key="post._path" class="level-2">
-          <NuxtLink class="post-link" :to="post._path" :title="post.title">
+        <p v-for="(post, index) in list" :key="post._path" class="level-2">
+          <NuxtLink class="post-link" :to="post._path" :title="post.title" :style="{ animationDelay: `${index * 0.2 + 3.5}s` }">
             '{{ post.title }}',
           </NuxtLink>
         </p>
@@ -55,6 +55,7 @@ const blogQuery: QueryBuilderParams = { path: '/blog', limit: 3, sort: [{ date: 
 </template>
 
 <style scoped lang="scss">
+@import '@/assets/css-utils/breakpoints.scss';
 .home-mono-resources {
   padding: 1rem;
   //border: 1px solid var(--border-color-alt);
@@ -65,7 +66,7 @@ const blogQuery: QueryBuilderParams = { path: '/blog', limit: 3, sort: [{ date: 
     font-size: 1.15rem;
     margin-bottom: 0;
     font-family: monospace;
-    line-height: 1.75;
+    line-height: 1.5;
 
     &.level-0 {
       white-space: nowrap;
@@ -97,7 +98,11 @@ const blogQuery: QueryBuilderParams = { path: '/blog', limit: 3, sort: [{ date: 
   .category-link,
   .post-link {
     border-bottom: none;
-    //color: var(--accent-color-alt);
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25rem;
+    text-decoration-color: var(--border-color-alt);
 
     &:hover {
       color: var(--accent-color);
@@ -109,7 +114,7 @@ const blogQuery: QueryBuilderParams = { path: '/blog', limit: 3, sort: [{ date: 
   }
 
   .post-link {
-    display: block;
+    display: inline-block;
   }
 }
 </style>
