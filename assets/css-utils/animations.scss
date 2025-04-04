@@ -1,0 +1,23 @@
+@keyframes appear-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear-up-blur {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scaleX(0.2);
+    filter: blur(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleX(1);
+    filter: blur(0);
+  }
+}

@@ -18,16 +18,20 @@ defineOgImageComponent('ChameleonMindOg', {
 </script>
 
 <template>
-  <NuxtLayout>
-    <AuroraLight />
-    <div class="main-content">
-      <MainNavigation />
-      <HomeGrid />
-    </div>
-  </NuxtLayout>
+  <div style="position: relative">
+    <NuxtLayout>
+      <AuroraLight />
+      <div class="main-content">
+        <HomeMono />
+      </div>
+    </NuxtLayout>
+  </div>
 </template>
 
 <style scoped lang="scss">
+:deep(.aurora-light) {
+  z-index: 0;
+}
 .main-content {
   position: relative;
   z-index: 1;

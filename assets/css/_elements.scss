@@ -1,11 +1,11 @@
 a {
   text-decoration: none;
-  border-bottom: 1px dashed var(--text-color);
+  border-bottom: 1px dashed var(--accent-color);
   transition: color 0.2s;
 
   &:hover {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
+    color: var(--text-color-hover);
+    border-color: var(--accent-color-hover);
     border-bottom-style: solid;
   }
 }
@@ -13,9 +13,9 @@ a {
 pre.shiki {
   overflow: auto;
   border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color-alt);
   padding: 0.5rem;
-  background-color: #e9e8ed;
+  //background-color: #e9e8ed;
   font-size: 0.9rem;
 
   :has(.highlighted) .line {
@@ -44,4 +44,26 @@ th, td {
 
 tr:nth-child(even) {
   background-color: var(--color-bg-tertiary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+p > code {
+  font-family: monospace;
+  font-size: 0.9em;
+  background-color: var(--base-color-lighter);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color-alt);
+  font-weight: lighter;
+  padding: 0.1rem 0.2rem;
 }

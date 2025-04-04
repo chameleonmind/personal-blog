@@ -1,15 +1,24 @@
 :root {
-  --font-family: 'Open Sans', 'Arial', -apple-system, BlinkMacSystemFont,
+  --font-family: 'Manrope', 'Arial', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
-  --font-family-heading: 'Space Grotesk', 'Open Sans', 'Arial', -apple-system, BlinkMacSystemFont,
+  --font-family-heading: 'Manrope', 'Arial', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-family-mono: 'Major Mono Display', monospace;
   //--text-color: #262528;
-  --text-color: #160947;
-  --base-color: #f1eef3;
-  --border-color: #c0bac1;
-  --accent-color: #4c07f8;
+  --text-color: #EFF1F3;
+  --text-color-hover: #cfc5c9;
+  //--base-color: #223843;
+  --base-color: #1b2b33;
+  --base-color-lighter: rgba(34, 54, 64, 0.2);
+  --border-color: #D8315B;
+  --border-color-alt: rgba(216, 49, 91, 0.5);
+  //--accent-color: #D8315B;
+  --accent-color: #d62652;
+  --accent-color-hover: #f85d84;
+  --accent-color-alt: #3E92CC;
+  --accent-color-alt-hover: #2078b5;
   --border-radius: 6px;
   --h1-font-size: 3rem;
   --h2-font-size: 1.75rem;

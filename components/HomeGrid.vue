@@ -88,7 +88,7 @@ import TilHomePostList from '~/components/TilHomePostList.vue'
 </template>
 
 <style scoped lang="scss">
-@import '@/assets/scss/breakpoints.scss';
+@import '@/assets/css-utils/breakpoints.scss';
 .home {
   display: flex;
   flex-direction: column;

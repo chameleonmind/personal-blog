@@ -25,11 +25,13 @@ defineOgImageComponent('ChameleonMindOg', getOgImageDescription(title, descripti
 </script>
 
 <template>
-  <NuxtLayout name="blog">
-    <PostMeta :post-date="postDate" :post-categories="postCategories" />
-    <ContentDoc />
-    <PostSurround />
-  </NuxtLayout>
+  <div>
+    <NuxtLayout name="blog">
+      <PostMeta :post-date="postDate" :post-categories="postCategories" />
+      <ContentDoc />
+      <PostSurround category="blog" />
+    </NuxtLayout>
+  </div>
 </template>
 
 <style scoped>
