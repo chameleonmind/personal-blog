@@ -6,7 +6,9 @@ export default defineNuxtConfig({
       'Space Grotesk': [300, 700],
       'Open Sans': [400, 700],
       'Manrope': [400, 700],
-    }
+      'Major Mono Display': [400],
+    },
+    provider: 'google',
   }], 'nuxt-og-image', '@nuxt/image', '@nuxtjs/seo'],
   site: {
     // production URL
@@ -18,7 +20,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.scss'],
   content: {
     highlight: {
-      theme: 'github-light-default'
+      theme: 'github-dark-default'
     }
   },
   app: {
@@ -41,6 +43,14 @@ export default defineNuxtConfig({
         { rel: 'manifest', href: '/site.webmanifest' },
         { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' }
       ]
+    },
+    pageTransition: {
+      name: 'blur',
+      mode: 'out-in'
+    },
+    layoutTransition: {
+      name: 'blur',
+      mode: 'out-in',
     }
   }
 })

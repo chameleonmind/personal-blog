@@ -12,11 +12,11 @@
 </template>
 
 <style scoped lang="scss">
-@import '@/assets/scss/breakpoints.scss';
+@import '@/assets/css-utils/breakpoints.scss';
 .aurora-light {
   pointer-events: none;
   position: fixed;
-  z-index: 0;
+  z-index: -1;
 
   .aurora-grid {
     position: fixed;
@@ -64,14 +64,18 @@
 
   .aurora-blue {
     top: 100dvh;
-    left: 0;
-    transform: translate(-25%, -50%);
-    width: 150vw;
-    height: 5vw;
-    border-radius: 50vh;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 75vw;
+    height: 50vw;
+    border-radius: 50%;
     filter: blur(30px);
-    opacity: 0.1;
-    background: radial-gradient(circle, #039cdd 0%, var(--base-color) 100%);
+    opacity: 0.08;
+    background: radial-gradient(
+      circle,
+      var(--accent-color-alt) 0%,
+      var(--base-color) 100%
+    );
   }
 
   .aurora-red {

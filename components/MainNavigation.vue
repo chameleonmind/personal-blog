@@ -36,15 +36,27 @@ const { data: navigation } = useAsyncData('navigation', async () => {
 </template>
 
 <style scoped lang="scss">
+@import '@/assets/css-utils/breakpoints.scss';
 header {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color-alt);
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: var(--header-height);
   padding: 0 1rem;
+  color: var(--accent-color);
+  margin: 0 0.5rem;
+
+  @include screen-size('tablet') {
+    margin: 0 1rem;
+  }
+
+  @include screen-size('desktop') {
+    margin: 0 2rem;
+  }
 }
 .logo-link {
+  font-family: var(--font-family-mono);
   border-bottom: none;
   display: flex;
   align-items: center;
@@ -90,7 +102,7 @@ header {
 }
 .logo-text {
   font-weight: 700;
-  font-family: var(--font-family-heading), sans-serif;
+  font-family: var(--font-family-mono), sans-serif;
   margin-bottom: 0;
   visibility: hidden;
   opacity: 0;
@@ -101,12 +113,13 @@ header {
 
 nav ul {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 
   a {
-    text-transform: uppercase;
-    font-size: 0.875rem;
+    font-size: 1.15rem;
+    font-weight: bold;
     border-bottom: none;
+    font-family: var(--font-family-mono);
   }
 }
 </style>

@@ -25,8 +25,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <AuroraLight />
   <main>
+    <AuroraLight />
     <MainNavigation id="main-nav" class="sticky-header" :class="{ 'nav-hidden': scrollingDown }" />
     <div class="blog-layout">
       <slot />
@@ -36,7 +36,7 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-@import '@/assets/scss/breakpoints.scss';
+@import '@/assets/css-utils/breakpoints.scss';
 
 .sticky-header {
   position: sticky;
@@ -61,6 +61,8 @@ onMounted(() => {
   :deep(h1) {
     margin-top: 0.5rem;
     font-size: 2.25rem;
+    font-family: var(--font-family-mono);
+    text-transform: lowercase;
 
     @include screen-size('tablet') {
       font-size: var(--h1-font-size);

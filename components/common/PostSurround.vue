@@ -1,9 +1,11 @@
 <script setup lang="ts">
+const props = defineProps<{
+  category: 'blog' | 'til'
+}>()
 const route = useRoute()
-
-const { data: posts } = useAsyncData('blog-surround', () => queryContent()
+const { data: posts } = useAsyncData(props.category ? `${props.category}-surround` : 'blog-surround', () => queryContent()
   .only(['title', '_path', '_dir'])
-  .where({ _dir: 'blog' })
+  .where({ _dir: props.category ?? 'blog' })
   .findSurround(route.path))
 </script>
 

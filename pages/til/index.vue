@@ -20,9 +20,11 @@ defineOgImageComponent('ChameleonMindOg', {
 </script>
 
 <template>
-  <NuxtLayout name="blog">
-    <PostList path="/til" />
-  </NuxtLayout>
+  <div>
+    <NuxtLayout name="blog">
+      <PostList path="/til" />
+    </NuxtLayout>
+  </div>
 </template>
 
 <style scoped>

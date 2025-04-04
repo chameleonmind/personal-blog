@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import PostSurround from '~/components/common/PostSurround.vue'
 import { useDynamicMetas } from '~/composables/useDynamicMetas'
 
 const { title, description } = await useDynamicMetas()
@@ -27,10 +26,11 @@ defineOgImageComponent('ChameleonMindOg', {
 </script>
 
 <template>
-  <NuxtLayout name="blog">
-    <ContentDoc />
-    <PostSurround />
-  </NuxtLayout>
+  <div>
+    <NuxtLayout name="blog">
+      <ContentDoc />
+    </NuxtLayout>
+  </div>
 </template>
 
 <style scoped></style>

@@ -1,11 +1,14 @@
 <script setup lang="ts">
-defineProps<{
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+
+const props = defineProps<{
   path: string
 }>()
+const query: QueryBuilderParams = { path: props.path, sort: [{ date: -1 }] }
 </script>
 
 <template>
-  <ContentList :path>
+  <ContentList :query>
     <template #default="{ list }">
       <div v-for="post in list" :key="post._path" class="single-post">
         <p class="date">
@@ -32,7 +35,7 @@ defineProps<{
 .single-post {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color-alt);
 }
 .date {
   font-size: 0.875rem;
