@@ -23,7 +23,7 @@ function restartAnimation() {
           <span v-else :key="letter + index" class="name-letter" :style="{ animationDelay: `${index * 0.08}s` }">{{ letter }}</span>
         </template>
       </h1>
-      <p class="description appear-animation" style="animation-delay: 1.4s">
+      <p class="description accented appear-animation" style="animation-delay: 1.4s">
         aka chameleon mind
       </p>
       <p class="description appear-animation" style="animation-delay: 1.6s">
@@ -67,11 +67,11 @@ function restartAnimation() {
 
   .name {
     font-size: 3rem;
-    font-weight: 700;
+    //font-weight: 700;
     font-family: var(--font-family-mono);
     color: var(--accent-color);
     margin-bottom: 0;
-    cursor: default;
+    cursor: pointer;
 
     @include screen-size('tablet') {
       font-size: 3.5rem;
@@ -87,7 +87,7 @@ function restartAnimation() {
 
   .cta {
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -101,8 +101,12 @@ function restartAnimation() {
 
   .description {
     font-family: var(--font-family-mono);
-    color: var(--accent-color);
     max-width: 50ch;
+
+    &.accented {
+      color: var(--accent-color);
+      font-weight: 700;
+    }
   }
 }
 

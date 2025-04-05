@@ -29,17 +29,16 @@ const columnCount = ref(11)
 <style scoped lang="scss">
 @import '@/assets/css-utils/animations.scss';
 .svg-container {
-  width: 220px; /* Match SVG viewbox or desired display size */
+  width: 220px;
   height: 220px;
-  cursor: pointer; /* Example trigger */
+  cursor: pointer;
 }
 
 .mask-rect {
-  /* Initial state: Mask is transparent/invisible */
   opacity: 0;
   animation: appear-up-spin 300ms ease-in-out;
   animation-fill-mode: forwards;
-  stroke-width: 0.3;
+  stroke-width: 0.25;
   stroke: #959595;
 }
 </style>

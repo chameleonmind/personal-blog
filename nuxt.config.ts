@@ -3,8 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/content', ['@nuxtjs/google-fonts', {
     families: {
-      'Space Grotesk': [300, 700],
-      'Open Sans': [400, 700],
       'Manrope': [400, 700],
       'Major Mono Display': [400],
     },

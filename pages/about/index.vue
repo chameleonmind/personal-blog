@@ -23,7 +23,7 @@ useHead({
 defineOgImageComponent('ChameleonMindOg', {
   section: '| About',
   title: 'Projects and about me',
-  description: 'Milos Milosevic (Chameleon Mind)',
+  description: 'Milos Milosevic (Chameleon Mind)'
 })
 </script>
 
@@ -41,34 +41,38 @@ defineOgImageComponent('ChameleonMindOg', {
             </h1>
             <p class="about-description appear-animation" style="animation-delay: 0.4s">
               I'm Miloš Milošević, a web developer and front-end tech lead with over 10 years of experience creating
-              scalable and performant web applications. My technical expertise includes Vue 3, Nuxt 3, TypeScript,
-              JavaScript, Node.js, PHP, Laravel, and AdonisJS. Alongside building component libraries and web apps, I
-              have significant experience leading teams, mentoring developers, and managing software projects from
-              concept to production.<br>
-              I'm an avid book reader and enjoy reading and writing about technology, programming, and life in general.
+              scalable and performant web applications. My technical expertise includes Vue/Nuxt ecosystem,
+              JavaScript/TypeScript, Node.js, and PHP. I enjoy using Vue, AdonisJS and Laravel, but I have worked with
+              every major framework, including React, Angular, Svelte, and others. Alongside building component
+              libraries and web apps, I have significant experience leading teams, mentoring developers, and managing
+              software projects from concept to production.
+            </p>
+            <p class="about-description appear-animation" style="animation-delay: 0.6s">
+              I like reading books whenever I can, and enjoy writing about technology, programming, new trends, and
+              lots of other things I find interesting.
             </p>
           </div>
           <div class="about-content-right">
-            <h2 class="about-heading appear-animation" style="animation-delay: 0.6s">
+            <h2 class="about-heading appear-animation" style="animation-delay: 0.8s">
               selected projects
             </h2>
             <ul class="project-list">
-              <li class="appear-animation" style="animation-delay: 0.8s">
+              <li class="appear-animation" style="animation-delay: 1s">
                 <NuxtLink to="/frame-fusion">
                   Frame Fusion
                 </NuxtLink>
                 - animate sequences of images in a single frame
               </li>
-              <li class="appear-animation" style="animation-delay: 0.9s">
+              <li class="appear-animation" style="animation-delay: 1.1s">
                 <LinkOut href="https://github.com/chameleonmind/nshot">
                   Nshot
                 </LinkOut>
                 - a screenshot tool based on Screen Capture API
               </li>
-              <li class="appear-animation" style="animation-delay: 1s">
+              <li class="appear-animation" style="animation-delay: 1.2s">
                 Keysmash Kids - a game for kids that let's them smash keyboard and have fun (coming soon)
               </li>
-              <li class="appear-animation" style="animation-delay: 1.1s">
+              <li class="appear-animation" style="animation-delay: 1.3s">
                 ApeironUI - a Vue 3 component library (closed for public)
               </li>
             </ul>
@@ -102,7 +106,7 @@ defineOgImageComponent('ChameleonMindOg', {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 0;
 
     @include screen-size('tablet') {
       align-items: center;
@@ -153,8 +157,9 @@ defineOgImageComponent('ChameleonMindOg', {
 
   .about-description {
     font-size: 1rem;
-    max-width: 45ch;
+    max-width: 50ch;
     text-align: right;
+    text-wrap-style: pretty;
   }
 
   .appear-animation {

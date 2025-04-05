@@ -9,7 +9,7 @@ defineProps<{
     <a :href="href" target="_blank" rel="noopener noreferrer nofollow" class="footer-link">
       <slot />
     </a>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" class="feather feather-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg>
   </div>
 </template>
 
@@ -35,6 +35,7 @@ defineProps<{
 a.footer-link {
   font-family: var(--font-family-mono);
   font-size: 1rem;
+  font-weight: 700;
   color: var(--accent-color);
   border-bottom: none;
   flex: 1 1 auto;
