@@ -15,7 +15,7 @@ pre.shiki {
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color-alt);
   padding: 0.5rem;
-  //background-color: #e9e8ed;
+  background-color: var(--base-color-lighter);
   font-size: 0.9rem;
 
   :has(.highlighted) .line {

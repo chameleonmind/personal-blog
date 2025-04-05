@@ -3,12 +3,35 @@
 </script>
 
 <template>
-  <NuxtLink to="/about" class="home-mono-cta">
-    Projects and about me <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+  <NuxtLink to="/about" class="home-mono-cta-link">
+    Projects and about me <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="butt" stroke-linejoin="miter"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
   </NuxtLink>
 </template>
 
 <style scoped lang="scss">
+.home-mono-cta-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  //font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.15rem;
+  color: var(--accent-color);
+  transition: color 0.2s ease-in-out;
+
+  svg {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover {
+    color: var(--text-color);
+
+    svg {
+      transform: translateX(0.25rem);
+    }
+  }
+}
 .home-mono-cta {
   display: flex;
   align-items: center;
