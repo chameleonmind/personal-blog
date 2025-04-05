@@ -52,6 +52,7 @@ onMounted(() => {
 .blog-layout {
   flex: 1 1 auto;
   font-size: 1rem;
+  width: 100%;
   max-width: 720px;
   margin: 0 auto;
   padding: 1rem 2rem 4rem;

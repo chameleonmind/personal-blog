@@ -14,9 +14,15 @@
 </template>
 
 <style scoped lang="scss">
+@import '@/assets/css-utils/breakpoints.scss';
 .main-image {
-  width: calc(100vw - 1rem);
-  margin-left: calc(50% - 50vw + 0.5rem);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  @include screen-size('tablet') {
+    width: calc(100vw - 1rem);
+    margin-left: calc(50% - 50vw + 0.5rem);
+  }
   .content :deep(p:first-child) {
     height: 50vh;
     overflow: hidden;

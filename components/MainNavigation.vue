@@ -124,8 +124,8 @@ nav ul {
     font-size: 1.15rem;
     font-weight: 700;
     border-bottom: none;
-    text-transform: uppercase;
-    font-family: monospace;
+    text-transform: lowercase;
+    font-family: var(--font-family-mono);
   }
 }
 </style>
