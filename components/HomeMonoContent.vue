@@ -106,6 +106,7 @@ function restartAnimation() {
     &.accented {
       color: var(--accent-color);
       font-weight: 700;
+      font-size: 1rem;
     }
   }
 }
