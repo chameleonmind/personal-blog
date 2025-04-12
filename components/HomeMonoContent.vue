@@ -27,10 +27,10 @@ function restartAnimation() {
         aka chameleon mind
       </p>
       <p class="description appear-animation" style="animation-delay: 1.6s">
-        Former head of Product and current Lead Frontend enGineer at
+        Lead Frontend enGineer at
         <LinkOut href="https://wisertech.com/">
           Wiser Technology Serbia
-        </LinkOut>
+        </LinkOut>. Former Head of Product at Badin Soft.
       </p>
       <p class="description appear-animation" style="animation-delay: 1.8s">
         i build stuff using TypeScript and PhP
@@ -102,6 +102,7 @@ function restartAnimation() {
   .description {
     font-family: var(--font-family-mono);
     max-width: 50ch;
+    text-wrap: pretty;
 
     &.accented {
       color: var(--accent-color);

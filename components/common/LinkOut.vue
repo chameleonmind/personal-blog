@@ -17,11 +17,13 @@ defineProps({
 </script>
 
 <template>
-  <a :href :target :rel>
-    <slot />
-  </a>
+  <a :href :target :rel><slot /></a>
 </template>
 
 <style scoped>
-
+a {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
 </style>
