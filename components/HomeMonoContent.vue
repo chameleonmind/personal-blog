@@ -27,10 +27,10 @@ function restartAnimation() {
         aka chameleon mind
       </p>
       <p class="description appear-animation" style="animation-delay: 1.6s">
-        Lead Frontend enGineer at
+        Head of Solutions and Lead Frontend enGineer at
         <LinkOut href="https://wisertech.com/">
           Wiser Technology Serbia
-        </LinkOut>. Former Head of Product at Badin Soft.
+        </LinkOut>
       </p>
       <p class="description appear-animation" style="animation-delay: 1.8s">
         i build stuff using TypeScript and PhP

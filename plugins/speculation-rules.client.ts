@@ -24,6 +24,17 @@ export default defineNuxtPlugin((nuxtApp) => {
             eagerness: 'moderate'
           }
         ],
+        prerender: [
+          {
+            source: 'document',
+            where: {
+              and: [
+                { href_matches: '/*' },
+              ]
+            },
+            eagerness: 'moderate'
+          }
+        ]
       }
 
       const scriptEl = document.createElement('script')

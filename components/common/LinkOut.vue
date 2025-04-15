@@ -20,10 +20,4 @@ defineProps({
   <a :href :target :rel><slot /></a>
 </template>
 
-<style scoped>
-a {
-  display: inline-flex;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
-</style>
+<style scoped></style>
