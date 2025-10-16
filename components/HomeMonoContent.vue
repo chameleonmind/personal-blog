@@ -35,8 +35,8 @@ function restartAnimation() {
       <p class="description appear-animation" style="animation-delay: 1.8s">
         i build stuff using TypeScript and PhP
       </p>
-      <p v-if="false" class="description">
-        I enjoy using Vue, Nuxt, AdonisJS, and Laravel.
+      <p class="description appear-animation" style="animation-delay: 2s">
+        using Vue/Nuxt, AdonisJS, and Laravel.
       </p>
       <HomeMonoCta class="cta appear-animation" style="animation-delay: 2s" />
     </div>
