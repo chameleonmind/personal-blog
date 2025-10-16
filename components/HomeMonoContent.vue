@@ -27,7 +27,7 @@ function restartAnimation() {
         aka chameleon mind
       </p>
       <p class="description appear-animation" style="animation-delay: 1.6s">
-        Head of Solutions and Lead Frontend enGineer at
+        director of engineering - web platforms at
         <LinkOut href="https://wisertech.com/">
           Wiser Technology Serbia
         </LinkOut>
