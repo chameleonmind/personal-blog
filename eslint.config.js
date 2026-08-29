@@ -7,7 +7,12 @@ export default antfu(
       html: true,
       markdown: 'prettier',
     },
-    vue: true
+    vue: true,
+    // Posts are MDC, not plain markdown: `#slot-name` is a named slot and the
+    // fenced snippets are illustrative rather than a compilable program, so the
+    // markdown/JS rules produce false positives (and would rewrite `#attribution`
+    // into a heading, silently dropping the slot).
+    ignores: ['content/**']
   },
   {
     rules: {

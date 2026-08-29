@@ -1,0 +1,70 @@
+a {
+  text-decoration: none;
+  border-bottom: 1px dashed var(--accent-color);
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--text-color-hover);
+    border-color: var(--accent-color-hover);
+    border-bottom-style: solid;
+  }
+}
+
+pre.shiki {
+  overflow: auto;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color-alt);
+  padding: 0.5rem;
+  background-color: var(--base-color-lighter);
+  font-size: 0.9rem;
+
+  :has(.highlighted) .line {
+    opacity: 0.5;
+    filter: grayscale(0.5) blur(1px);
+
+    &.highlighted {
+      opacity: 1;
+      filter: grayscale(0) blur(0);
+    }
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+th {
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+th,
+td {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-bg-tertiary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+p > code {
+  font-family: monospace;
+  font-size: 0.9em;
+  background-color: var(--base-color-lighter);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color-alt);
+  font-weight: lighter;
+  padding: 0.1rem 0.2rem;
+}

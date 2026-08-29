@@ -1,13 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/content', ['@nuxtjs/google-fonts', {
-    families: {
-      'Manrope': [400, 700],
-      'Major Mono Display': [400],
-    },
-    provider: 'google',
-  }], 'nuxt-og-image', '@nuxt/image', '@nuxtjs/seo'],
+  modules: ['@nuxt/content', '@nuxt/fonts', '@nuxt/image', '@nuxtjs/seo'],
   site: {
     // production URL
     url: 'https://chameleonmind.dev',
@@ -16,9 +11,25 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
   css: ['~/assets/css/main.scss'],
+  fonts: {
+    // The families are only ever referenced through CSS custom properties
+    // (--font-family et al), which the default font-family scanner does not
+    // see, so declare them explicitly and let it read custom properties too.
+    families: [
+      { name: 'Manrope', provider: 'google', weights: [400, 700] },
+      { name: 'Major Mono Display', provider: 'google', weights: [400] },
+    ],
+    experimental: {
+      processCSSVariables: true
+    },
+  },
   content: {
-    highlight: {
-      theme: 'github-dark-default'
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-dark-default'
+        }
+      }
     }
   },
   app: {
